@@ -1,0 +1,95 @@
+import os
+import socket		# for getting system name
+import Tkinter
+from tkFileDialog import askopenfilename
+from tkFileDialog import askdirectory
+import struct
+import sys
+#import time
+#import smtplib
+from focal_stacker import single_stacker
+from focal_stacker import folder_stacker
+from focal_stacker import date_stacker
+
+workingPath = '/Users/logangrosenick/Documents/Data/Mouse_GC3.8_06302010/Slice_1'
+#workingPath = ''
+
+savePath = ''
+savePath = '/Users/logangrosenick/Documents/Data/Mouse_GC3.8_06302010/Slice_1/stacks'
+
+warpFile = ''
+# uncomment next line to use a previously-generated warp file:
+#warpFile = '/Users/logangrosenick/Documents/Data/Hcrt-GC3.8/20100628/2x2/2.01_for_rect.warp'
+
+autoDetectObj = 0	# not used yet
+
+# optical parameters
+magnification = 40.
+NA = 0.8
+
+# light field image input parameters
+pixLens = 9
+usePrevWarp = 0
+startTP = 0
+
+# stack output parameters
+numSlices = 25
+umPerSlice = 4.0
+emailInterval = 10000
+
+batchMode = 3	# what type of batch to perform
+
+# OS parameters...
+onMac 			= 1			# using mac (1) or linux (0) (my mac and my linux, in particular)
+							# can I do this with a python function?
+# set paths...
+if onMac:
+	# mac paths...
+	pathInit = os.path.expanduser("~")
+	#pathInit = '~/Dropbox/'
+else:
+	# linux paths...
+	pathInit = '/media/Neuronaut/20081021/Raw LF/' #pathLF+'/'
+
+
+# get path to folder full of raw LF images...
+if workingPath=='':
+	# ask for bout folder location with GUI...
+	print 'Please choose input folder...'
+	root = Tkinter.Tk()
+	root.withdraw()
+	workingPath = askdirectory(initialdir=pathInit)	# title='choose bout folder')
+
+# get path to save folder for tiff stacks...
+if savePath=='':
+	# ask for bout folder location with GUI...
+	print 'Please choose save folder...'
+	root = Tkinter.Tk()
+	root.withdraw()
+	savePath = askdirectory(initialdir=pathInit)	# title='choose bout folder')
+
+#if warpFile ext is .tif, calculate a .warp file
+
+
+print('Processing the sequence in folder: ' + workingPath)
+print('Saving the sequence to folder: ' + savePath)
+
+#---------------------------------------------------------------------------
+if batchMode == 0:
+	print('Processing raw LF image: ')
+	single_stacker(magnification, NA, workingPath, pixLens, warpFile, numSlices, umPerSlice, savePath)
+	
+elif batchMode == 1:
+	folder_stacker(workingPath, startTP, warpFile, emailInterval, magnification, NA, pixLens, numSlices, umPerSlice, savePath)
+	
+elif batchMode == 2:	#*** needs work
+	# ask for folder of folders location with GUI...
+	root = Tkinter.Tk()
+	root.withdraw()
+	pathFolder = askdirectory(initialdir=pathInit)	# title='choose folder folder')
+	print('Processing folder: ' + pathFolder)
+	folder_stacker(pathFolder, startTP, usePrevWarp, emailInterval, magnification, NA, pixLens, numSlices, umPerSlice)
+
+elif batchMode == 3:
+	pathDate = workingPath
+	date_stacker(pathDate, warpFile, emailInterval, magnification, NA, pixLens, numSlices, umPerSlice, savePath)

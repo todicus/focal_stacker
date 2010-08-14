@@ -1,0 +1,8 @@
+To do:
+
+- add sliders to GUI for time range to process (won't be necc if I have a batch engine)
+- warn if warp file cannot be created due to insufficient fits (how to know?
+  - implemented checking if warp file actually exists after creation (though this fails to generate a warning if the warp file name already existed)
+  - can equalize with ImageStack if neccessary (maybe just tell user that))
+- with single, set output to same folder?
+- call each single stack as a separate thread from the GUI controller, to keep track of progress, allow cancel, preview, etc

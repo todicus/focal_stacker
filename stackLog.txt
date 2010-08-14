@@ -1,0 +1,36 @@
+/Users/logangrosenick/Documents/Data/20100706/Raw_60x/OGB1_1.02
+/Users/logangrosenick/Documents/Data/20100706/Raw_60x/OGB1_2.01
+/Users/logangrosenick/Documents/Data/20100706/Raw_60x/OGB1_2.02
+/Users/logangrosenick/Documents/Data/20100706/Raw_60x/OGB1_2.03
+/Users/logangrosenick/Documents/Data/20100712/Raw_20x/10.01
+/Users/logangrosenick/Documents/Data/20100712/Raw_20x/2.02
+/Users/logangrosenick/Documents/Data/20100712/Raw_20x/2.03
+/Users/logangrosenick/Documents/Data/20100712/Raw_20x/3.01
+/Users/logangrosenick/Documents/Data/20100712/Raw_20x/3.02
+/Users/logangrosenick/Documents/Data/20100712/Raw_20x/4.01
+/Users/logangrosenick/Documents/Data/20100712/Raw_20x/4.02
+/Users/logangrosenick/Documents/Data/20100712/Raw_20x/5.01
+/Users/logangrosenick/Documents/Data/20100712/Raw_20x/6.01
+/Users/logangrosenick/Documents/Data/20100712/Raw_20x/7.01
+/Users/logangrosenick/Documents/Data/20100712/Raw_20x/8.01
+/Users/logangrosenick/Documents/Data/20100712/Raw_20x/9.01
+/Users/logangrosenick/Documents/Data/20100627_hcrt_gcamp3/Raw_40x/1.01
+/Users/logangrosenick/Documents/Data/20100627_hcrt_gcamp3/Raw_40x/1.02
+/Users/logangrosenick/Documents/Data/20100627_hcrt_gcamp3/Raw_40x/1.03
+/media/Datanaut/20081121/Raw LF//1.01
+/Users/logangrosenick/Documents/Data/20100627_hcrt_gcamp3/Raw_40x/1.04_1x1
+/Users/logangrosenick/Documents/Data/20100627_hcrt_gcamp3/Raw_40x/1.05
+/media/Datanaut/20081121/Raw LF//1.02
+/media/Datanaut/20081121/Raw LF//2.01
+/media/Datanaut/20081121/Raw LF//2.02
+/media/Datanaut/20081121/Raw LF//3.01
+/media/Datanaut/20081121/Raw LF//3.02
+/media/Datanaut/20081121/Raw LF//3.03
+/media/Datanaut/20081121/Raw LF//4.01
+/Users/logangrosenick/Documents/Data/20100810/Raw_40x/1.01
+/Users/logangrosenick/Documents/Data/20100810/Raw_40x//1.02
+/Users/logangrosenick/Documents/Data/20100810/Raw_40x//1.04
+/Users/logangrosenick/Documents/Data/20100810/Raw_40x//1.05
+/Users/logangrosenick/Documents/Data/20100810/Raw_20x//1.03
+/Users/logangrosenick/Documents/Data/20100810/Raw_20x/1.06_20x
+/Users/logangrosenick/Documents/Data/20100810/Raw_20x/stacks

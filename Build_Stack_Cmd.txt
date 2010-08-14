@@ -1,0 +1,23 @@
+/* This scripty bastard just takes three arguments (path to a folder containing a bunch of slice images to be 
+stacked, the name to use for the final tiff stack, and the path to the output folder).
+*/
+
+//print("---------------------------------------------");
+path = getArgument();
+if (path==""){
+       exit("No argument!");
+}
+//print(path);
+chunks = split(path, ",");   // split input string on white space
+
+input = chunks[0];
+name = chunks[1];
+saveFolder = chunks[2];
+
+print("input: " + input);
+print("name: " + name);
+print("save in: " + saveFolder);
+
+run("Image Sequence...","open=["+input+"] starting=1 increment=1 scale=100 sort");
+saveAs("Tiff", saveFolder+"/"+name+".tif");
+close();
